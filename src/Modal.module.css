@@ -1,0 +1,85 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .modal {
+    position: fixed;
+    top: 20vh;
+    left: 10%;
+    width: 70%;
+    height: 150px;
+    background-color: rgb(142, 196, 241);
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+    animation: slide-down 300ms ease-out forwards;
+  }
+  .modal input{
+    width: 200px;
+    height: 30px;
+    margin-left: 13%;
+    border: 100px;
+    border-color: black;
+  }
+  .modal p{
+    font-size: 20px;
+    align-items: center;
+    margin-left: 15% ;
+    
+      text-transform: uppercase;
+     background-image: linear-gradient(
+       -225deg,
+       #231557 0%,
+       #44107a 29%,
+       #ff1361 67%,
+       #fff800 100%
+     );
+     background-size: auto auto;
+     background-clip: border-box;
+     background-size: 200% auto;
+     color: #fff;
+     background-clip: text;
+     /* text-fill-color: transparent; */
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     animation: textclip 2s linear infinite;
+     display: inline-block;
+         font-size: 20px;
+   }
+   
+   @keyframes textclip {
+     to {
+       background-position: 200% center;
+     }
+   }
+  
+  
+  @media (min-width: 768px) {
+    .modal {
+      width: 40rem;
+      left: calc(50% - 20rem);
+    }
+  }
+  
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .button{
+    width: 80px;
+    margin-top: 12%;
+    height: 30px;
+  }
