@@ -38,9 +38,7 @@ function App(props) {
 
     
     
-    else {
-      setprint(false);
-    }
+    
 
     console.log("newName", name);
     if (name.length > 5) {
